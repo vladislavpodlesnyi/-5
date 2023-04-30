@@ -1,0 +1,24 @@
+import java.Scanner;
+   public class TStr25 
+   {
+     public static void main(String[] args) 
+     
+      Scanner in = new Scanner (System. in) ;
+      System.out.print ("Рядок ->");
+      StringBuffer sb = new StringBuffer(in. nextLine()) ;
+      sb.append (" .");
+      int maxSize = 0;
+      int count = 0;
+      while (sb. length () > 0) 
+      if (sb. charAt (0) !=32) {
+          sb. deleteCharat (0);  
+          if (count > maxsize) {
+             maxSize = count;
+             count = 0;
+           }
+        } else {
+           count++;
+           sb.deleteCharAt (0);
+        }
+    }
+     System.out.println("Максимальна кількість пробілів ->" + maxSize);
